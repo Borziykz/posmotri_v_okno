@@ -8,6 +8,10 @@ html {
   block-size: 100%;
 }
 
+fieldset {
+  border: none;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -18,12 +22,10 @@ html {
   white-space: nowrap;
 }
 
-
-a{
+a {
   text-decoration: none;
   border-bottom: none;
 }
-
 
 .page {
   inline-size: 1200px;
@@ -75,22 +77,22 @@ video {
   gap: 40px;
 }
 
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .content__list {
+  position: relative;
   overflow-y: scroll;
   width: 400px;
   height: 300px;
   overflow-x: clip;
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 
 .content__list::-webkit-scrollbar {
   width: 0;
-}
-
-.search-form__fieldset {
-  border: none;
 }
 
 .search-form__textfield {
@@ -110,12 +112,12 @@ video {
   text-align: left;
 }
 
-.search-form__textfield:focus {
+.search-form__textfield:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
 
-.button{
+.button {
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
@@ -133,9 +135,10 @@ video {
   padding: 6px 73px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover {
   text-decoration: underline;
   cursor: pointer;
+  text-underline-offset: 3px;
 }
 
 .search-form__label-text {
@@ -146,7 +149,7 @@ video {
   text-align: left;
 }
 
-.more-button:focus{
+.more-button:focus-visible {
   outline-offset: -1px;
 }
 
@@ -154,7 +157,7 @@ video {
   text-decoration: underline;
 }
 
-.button:focus {
+.button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -165,6 +168,7 @@ video {
 
 .content__accent {
   color: #545050;
+  font-family: inherit;
 }
 
 .title {
@@ -185,6 +189,7 @@ video {
 .content__video-card-description-container {
   text-decoration: none;
   color: #fff;
+  width: 100%;
 }
 
 .content__video-card-title {
@@ -193,7 +198,7 @@ video {
   font-weight: 700;
   line-height: 30px;
   text-align: left;
-  padding: 2px 0 0 2px;
+  text-transform: uppercase;
 }
 
 .content__video-card-description {
@@ -205,7 +210,7 @@ video {
   padding-top: 8px;
 }
 
-.content__video-card:focus{
+.content__video-card:focus-visible {
   outline: 1px solid #fff;
   outline-offset: -2px;
 }
@@ -222,11 +227,17 @@ video {
 }
 
 .content__card-link {
+  display: block;
   width: 100%;
   height: 103px;
 }
 
-.search-form__pseudo-checkbox {
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.search-form__pseudo-checkbox::before {
+  content: " ";
   display: block;
   width: 19px;
   height: 19px;
@@ -243,21 +254,15 @@ video {
 .search-form__label {
   display: flex;
   gap: 5px;
+  width: fit-content;
+  appearance: none;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox {
-  background-color: #fff;
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  background: #fff;
 }
 
-.search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.6px;
-  text-align: left;
-}
-
-.search-form__label:focus {
+.search-form__label:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 3px;
 }
@@ -279,18 +284,36 @@ video {
 
 .result__video-container {
   object-fit: cover;
+  position: relative;
+  width: 711px;
+  height: 386px;
 }
 
-.more-button{
+.result__video {
+  width: 100%;
+  height: 100%;
+}
+
+.preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-button {
   width: 100%;
   padding: 5px 0;
 }
 
-.content__video-card:active{
+.content__video-card:active {
   background-color: #545050;
 }
 
-.content__video-card-description-container:hover{
+.content__video-card-description-container:hover {
   text-decoration: underline 2px solid #fff;
   text-underline-offset: 6px;
 }
