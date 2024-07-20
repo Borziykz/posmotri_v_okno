@@ -29,6 +29,8 @@ a {
 
 .page {
   inline-size: 1200px;
+  display: grid;
+  justify-items: center;
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -64,27 +66,27 @@ video {
   width: 100%;
 }
 
+
 .content {
   display: flex;
-  height: 100%;
-  gap: 30px;
+  gap: 34px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .search-form {
   display: flex;
-  gap: 40px;
+  gap: 42px;
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 
 .content__list {
   position: relative;
   overflow: auto;
-  width: 400px;
+  width: 402px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -96,7 +98,7 @@ video {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   width: 225px;
-  padding: 4px 14px 2px 0;
+  margin: 0px 0px 5px 1px;
   appearance: none;
   color: #fff;
   font-size: inherit;
@@ -206,6 +208,7 @@ video {
   line-height: 30px;
   text-align: left;
   text-transform: uppercase;
+  margin: 2px 0 0 2px;
 }
 
 .content__video-card-description {
@@ -214,7 +217,12 @@ video {
   font-weight: 400;
   line-height: 16.2px;
   text-align: left;
-  padding-top: 8px;
+  margin: 5px 0 0 2px;
+}
+
+
+.content__card-link:focus {
+  outline: none;
 }
 
 .content__card-link:focus-visible {
@@ -232,7 +240,7 @@ video {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 23px;
 }
 
 .content__card-link {
@@ -256,7 +264,7 @@ video {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .search-form__label {
@@ -276,18 +284,19 @@ video {
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  margin-left: 2px;
 }
 
 .result {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 17px
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
+  width: 705px;
   height: 386px;
 }
 
@@ -299,10 +308,6 @@ video {
 
 .content__card-link:active {
   background-color: #545050;
-}
-
-.content__card-link:focus {
-  outline: none;
 }
 
 .content__card-link:hover {
