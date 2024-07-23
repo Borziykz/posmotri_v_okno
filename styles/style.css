@@ -29,8 +29,9 @@ a {
 
 .page {
   inline-size: 1200px;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -80,7 +81,7 @@ video {
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
 .content__list {
@@ -100,7 +101,6 @@ video {
   appearance: none;
   color: #fff;
   font-size: inherit;
-  margin-top: 7px;
 }
 
 .search-form__textfield:focus {
@@ -117,7 +117,11 @@ video {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
-  outline-offset: 4px;
+  outline-offset: 1px;
+}
+
+.search-form__fieldset:nth-child(1) .search-form__label{
+  margin-top: 7px;
 }
 
 .search-form__label:active:has(.search-form__textfield) {
@@ -145,8 +149,8 @@ video {
 
 
 .more-button{
-  width: 98%;
-  margin: 3px;
+  width: 99%;
+  margin: 2px;
 }
 
 
@@ -233,7 +237,7 @@ video {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;
+  outline-offset: 2px;
 }
 
 .content__video-card-thumbnail {
@@ -252,7 +256,8 @@ video {
 .content__card-link {
   display: block;
   width: 98%;
-  padding: 3px;
+  margin: 3px;
+  padding: 1px;
 }
 
 .content__card-link_current {
