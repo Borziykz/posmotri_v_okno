@@ -67,7 +67,6 @@ video {
   width: 100%;
 }
 
-
 .content {
   display: flex;
   align-items: flex-end;
@@ -120,7 +119,7 @@ video {
   outline-offset: 1px;
 }
 
-.search-form__fieldset:nth-child(1) .search-form__label{
+.search-form__fieldset:nth-child(1) .search-form__label {
   margin-top: 7px;
 }
 
@@ -147,12 +146,10 @@ video {
   padding: 6px 0;
 }
 
-
-.more-button{
+.more-button {
   width: 99%;
   margin: 2px;
 }
-
 
 .search-form__submit-button {
   margin-top: 20px;
@@ -229,7 +226,6 @@ video {
   text-align: left;
   margin: 5px 0 0 2px;
 }
-
 
 .content__card-link:focus {
   outline: none;
